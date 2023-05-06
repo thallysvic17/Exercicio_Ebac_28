@@ -6,7 +6,8 @@ const Form = () =>{
     //visualizar o valor, altera o valor
     let [peso, setPeso] = useState("");
     let [altura, setAltura] = useState("");
-    let [resultado, setResultado] = useState("")
+    let [resultado, setResultado] = useState("");
+   
     
 
     const calcImc =() =>{
@@ -23,9 +24,7 @@ const Form = () =>{
         const imcFixed =imc.toFixed(2);
         setResultado(imcFixed);
     };
-    
-    
-    
+
 
 return(
    <div className={styles.container}>
@@ -52,9 +51,8 @@ return(
 
             <label htmlFor="imc">IMC</label>
             <p>Seu imc e de {resultado}</p>
-            {calcImc}
             
-        
+            
         </div>
    </div>
 )
